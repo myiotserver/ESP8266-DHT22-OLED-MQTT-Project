@@ -23,14 +23,17 @@ Repositori ini berisi kode sumber untuk proyek berbasis mikrokontroler ESP8266. 
 
 ## Cara Penggunaan
 1. **Persiapan**: Buka Arduino IDE dan pastikan board ESP8266 sudah terinstal melalui *Boards Manager*.
-2. **Konfigurasi**: Buka file `.ino` dan sesuaikan kredensial WiFi Anda:
-   ```cpp
-   const char* ssid = "NAMA_WIFI_ANDA";
-   const char* password = "PASSWORD_WIFI_ANDA";
-   ```
+2. **Konfigurasi Kredensial Aman**:
+  - Salin `esp8266_dht22_oled_mqtt/credentials.example.h` menjadi `esp8266_dht22_oled_mqtt/credentials.h`.
+  - Isi `credentials.h` dengan data WiFi/MQTT asli Anda.
+  - File `credentials.h` sudah diabaikan oleh Git (`.gitignore`), jadi tidak ikut ter-upload ke GitHub.
 3. **Instalasi Library**: Pastikan semua library yang dibutuhkan sudah terpasang melalui *Library Manager*.
 4. **Upload**: Hubungkan ESP8266 ke komputer, pilih port yang sesuai, dan tekan tombol **Upload**.
 5. **Monitoring**: Buka *Serial Monitor* dengan baud rate 115200 untuk melihat status perangkat.
+
+## Keamanan Repository
+- Jangan menyimpan SSID, password WiFi, host/port MQTT, atau username/password MQTT langsung di file `.ino`.
+- Jika kredensial sempat ter-push ke GitHub, segera ganti password tersebut (rotate) meskipun commit sudah dihapus.
 
 ## Struktur Folder
 - `/src`: Berisi kode sumber utama.

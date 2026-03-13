@@ -1,0 +1,2 @@
+# Local secrets for ESP8266 sketch
+esp8266_dht22_oled_mqtt/credentials.h
