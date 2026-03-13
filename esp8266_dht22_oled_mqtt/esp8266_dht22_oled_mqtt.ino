@@ -379,7 +379,7 @@ void drawSensorPage(bool wifiOk, bool mqttOk, float tempC, float humidity, int8_
   } else {
     display.print(humidity, 1);
   }
-  display.print(" %");
+  display.print("%");
 
   drawPageIndicator(activePage);
 
