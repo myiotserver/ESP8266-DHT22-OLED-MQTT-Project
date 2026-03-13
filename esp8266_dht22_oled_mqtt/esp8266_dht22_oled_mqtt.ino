@@ -296,7 +296,7 @@ void drawRtcPage(bool wifiOk, bool mqttOk, int8_t xOffset, uint8_t activePage) {
   display.clearBuffer();
   drawStatusIcons(wifiOk, mqttOk);
   drawCuteFrame();
-  drawClockIconCute(29 + xOffset, 8);
+  drawClockIconCute(29 + xOffset, 7);
 
   char timeBig[6] = "--:--";
   char timeSec[3] = "--";
